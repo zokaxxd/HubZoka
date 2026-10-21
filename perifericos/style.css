@@ -1,0 +1,188 @@
+:root {
+    --bg-dark: #050505;
+    --bg-card: #111;
+    --accent-red: #ff203e;
+    --accent-glow: rgba(255, 32, 62, 0.3);
+    --text-white: #ffffff;
+    --text-muted: #a0a0a0;
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 32, 62, 0.2);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.logo span { color: var(--accent-red); }
+
+.nav-links { display: flex; align-items: center; gap: 25px; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: var(--transition);
+    font-size: 14px;
+    font-weight: 600;
+}
+.nav-links a:hover { color: var(--accent-red); }
+
+.btn-order {
+    background: var(--accent-red);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.highlight { color: var(--accent-red); text-shadow: 0 0 20px var(--accent-glow); }
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-main {
+    padding: 15px 40px;
+    background: var(--accent-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-main:hover { transform: scale(1.05); box-shadow: 0 0 30px var(--accent-glow); }
+
+.section-title {
+    text-align: center;
+    padding: 80px 0 40px;
+}
+
+.section-title h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    color: var(--text-white);
+}
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-red);
+    margin: 15px auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 8% 80px;
+}
+
+.menu-item {
+    background: var(--bg-card);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+    text-align: center;
+    padding-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.product-icon {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    color: white;
+    transition: var(--transition);
+}
+
+.tech-bg {
+    background: linear-gradient(135deg, #000000, #434343);
+}
+
+.menu-item:hover .product-icon {
+    transform: scale(1.05);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-red);
+    box-shadow: 0 0 20px rgba(255, 32, 62, 0.1);
+}
+
+.menu-item h3 {
+    margin: 20px 0 10px;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-white);
+}
+.menu-item p {
+    color: var(--text-muted);
+    padding: 0 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.menu-item .price {
+    color: var(--accent-red);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
